@@ -165,7 +165,7 @@ footer{
         <a href="login.html">Login</a>
         <a href="signup.html">Signup</a>
     </div>
-    <a href="onclick="logout()">Logout</a>
+    <a href="#" onclick="logout()">Logout</a>
 </nav>
 
 <!-- HERO SECTION -->
@@ -233,6 +233,12 @@ footer{
 <footer>
     <p>© 2026 Bharath Heritage Hub | Celebrating India's Legacy</p>
 </footer>
+<script>
+function logout() {
+    localStorage.removeItem("username");
+    window.location.href = "login.html";
+}
+</script>
 
 </body>
 </html>
