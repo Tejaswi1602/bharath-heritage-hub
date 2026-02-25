@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Profile - Bharath Heritage Hub</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+<h1>Bharath Heritage Hub</h1>
+<div>
+<a href="dashboard.html">Dashboard</a>
+<a href="#" onclick="logout()">Logout</a>
+</div>
+</nav>
+
+<div class="container">
+<div class="form-box">
+<h2>Your Profile</h2>
+<p><b>Name:</b> <span id="name"></span></p>
+<p><b>Email:</b> <span id="email"></span></p>
+</div>
+</div>
+
+<script>
+document.getElementById("name").innerText = localStorage.getItem("name");
+document.getElementById("email").innerText = localStorage.getItem("email");
+
+function logout(){
+localStorage.clear();
+window.location.href="login.html";
+}
+</script>
+
+</body>
+</html>

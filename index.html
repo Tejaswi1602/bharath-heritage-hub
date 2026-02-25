@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bharath Heritage Hub</title>
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+
+/* GLOBAL */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins', sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#fdf6ec;
+    color:#333;
+}
+
+/* NAVBAR */
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 80px;
+    background:#8b5e3c;
+    color:white;
+}
+
+nav h1{
+    font-family:'Playfair Display', serif;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin-left:25px;
+    font-weight:500;
+    transition:0.3s;
+}
+
+nav a:hover{
+    color:#ffcc80;
+}
+
+/* HERO SECTION */
+.hero{
+    height:90vh;
+    background:url('https://images.unsplash.com/photo-1564507592333-c60657eea523') no-repeat center/cover;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:white;
+}
+
+.hero h2{
+    font-size:55px;
+    font-family:'Playfair Display', serif;
+}
+
+.hero p{
+    margin:20px 0;
+    font-size:18px;
+}
+
+.btn{
+    display:inline-block;
+    padding:12px 30px;
+    background:#ff9933;
+    color:white;
+    text-decoration:none;
+    border-radius:5px;
+    font-size:16px;
+    transition:0.3s;
+}
+
+.btn:hover{
+    background:#e68a00;
+}
+
+/* SECTION */
+.section{
+    padding:70px 80px;
+    text-align:center;
+}
+
+.section h2{
+    font-family:'Playfair Display', serif;
+    margin-bottom:40px;
+    font-size:35px;
+}
+
+/* CARDS */
+.cards{
+    display:flex;
+    gap:30px;
+    justify-content:center;
+    flex-wrap:wrap;
+}
+
+.card{
+    width:300px;
+    background:white;
+    border-radius:10px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+    overflow:hidden;
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}
+
+.card img{
+    width:100%;
+    height:200px;
+    object-fit:cover;
+}
+
+.card h3{
+    margin:15px 0 10px;
+}
+
+.card p{
+    padding:0 15px 20px;
+    font-size:14px;
+}
+
+/* FOOTER */
+footer{
+    background:#8b5e3c;
+    color:white;
+    text-align:center;
+    padding:20px;
+    margin-top:40px;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav>
+    <h1>Bharath Heritage Hub</h1>
+    <div>
+        <a href="index.html">Home</a>
+        <a href="login.html">Login</a>
+        <a href="signup.html">Signup</a>
+    </div>
+</nav>
+
+<!-- HERO SECTION -->
+<section class="hero">
+    <h2>Discover India's Timeless Legacy</h2>
+    <p>Explore culture, heritage, monuments and traditions of Incredible India.</p>
+    <a href="#monuments" class="btn">Explore Heritage</a>
+</section>
+
+<!-- MONUMENTS -->
+<section class="section" id="monuments">
+    <h2>Famous Monuments of India</h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <img src="images/tajmahal.jpg" alt="Taj Mahal">
+            <h3>Taj Mahal</h3>
+            <p>An eternal symbol of love located in Agra.</p>
+        </div>
+
+        <div class="card">
+            <img src="images/hampi.jpg" alt="Hampi">
+            <h3>Hampi</h3>
+            <p>Ancient ruins of the glorious Vijayanagara Empire.</p>
+        </div>
+
+        <div class="card">
+            <img src="images/goldentemple.jpg" alt="Golden Temple">
+            <h3>Golden Temple</h3>
+            <p>A sacred place of peace and spiritual unity.</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- CULTURE -->
+<section class="section" style="background:#fff3e0;">
+    <h2>Indian Culture & Traditions</h2>
+
+    <div class="cards">
+
+        <div class="card">
+             <img src="images/festival.jpg" alt="Festivals">
+            <h3>Festivals</h3>
+            <p>Celebrate Diwali, Holi, Navratri and more vibrant festivals.</p>
+        </div>
+
+        <div class="card">
+            <img src="images/classical.jpg" alt="Classical Dance">
+            <h3>Classical Dance</h3>
+            <p>Bharatanatyam, Kathak and other traditional dance forms.</p>
+        </div>
+
+        <div class="card">
+            <img src="images/madhubani.jpg" alt="Art & Craft">
+            <h3>Art & Craft</h3>
+            <p>Madhubani, Warli, Kalamkari and timeless Indian artistry.</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <p>© 2026 Bharath Heritage Hub | Celebrating India's Legacy</p>
+</footer>
+
+</body>
+</html>
