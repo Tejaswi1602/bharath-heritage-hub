@@ -22,13 +22,12 @@ let users = [];
 
 // ================= ROUTES =================
 
-// Home
+// Home (Protected)
 app.get("/", (req, res) => {
-  if (req.session.user) {
-    res.sendFile(path.join(__dirname, "index.html"));
-  } else {
-    res.redirect("/login");
+  if (!req.session.user) {
+    return res.redirect("/login");
   }
+  res.sendFile(path.join(__dirname, "index.html"));
 });
 
 // Signup Page
@@ -70,14 +69,6 @@ app.post("/login", (req, res) => {
   }
 });
 
-// Dashboard (Protected)
-app.get("/", (req, res) => {
-  if (!req.session.user) {
-    return res.redirect("/login");
-  }
-  res.sendFile(path.join(__dirname, "index.html"));
-});
-
 // Profile
 app.get("/profile", (req, res) => {
   if (!req.session.user) {
@@ -89,11 +80,13 @@ app.get("/profile", (req, res) => {
 // Logout
 app.get("/logout", (req, res) => {
   req.session.destroy(() => {
-    res.redirect("/");
+    res.redirect("/login");
   });
 });
 
-// Start server
-app.listen(3000, () => {
-  console.log("Server running at http://localhost:3000");
+//  IMPORTANT FOR VERCEL
+const PORT = process.env.PORT || 3000;
+
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
 });
